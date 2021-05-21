@@ -22,10 +22,6 @@
 
 `debug`: Start development server in debug mode
 
-`start-prod`: Start the production server
-
-`debug-prod`: Start the production server in debug mode
-
 ## How to Run
 
 To run the app you will need:
