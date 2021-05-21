@@ -1,4 +1,4 @@
-name: Build & Push to DockerHub
+name: Test, Build & Push to DockerHub
 
 on:
   push:
@@ -9,7 +9,30 @@ on:
       - 'Makefile'
 
 jobs:
+  test:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Docker Image Security Test with Snyk
+      uses: snyk/actions/docker@master
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_AUTH_TOKEN }}
+      with:
+        image: nginx:stable-alpine
+        args: --fail-on=upgradable
+
+    - name: Notify slack fail
+      if: failure()
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
+      uses: voxmedia/github-action-slack-notify-build@v1
+      with:
+        channel_id: ${{ secrets.SLACK_CHANNEL_ID }}
+        status: FAILED
+        color: danger
+
   build-and-deploy-nginx:
+    needs: test
     name: Build and Deploy Nginx
     runs-on: ubuntu-latest
     steps:
