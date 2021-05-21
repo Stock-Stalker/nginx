@@ -22,6 +22,8 @@
 
 `debug`: Start development server in debug mode
 
+`test-image-security`: Test security vulnerabilities for base images (must have [snyk](https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI) installed globally)
+
 ## How to Run
 
 To run the app you will need:
