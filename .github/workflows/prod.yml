@@ -31,7 +31,7 @@ jobs:
         with:
           channel_id: ${{ secrets.SLACK_CHANNEL_ID }}
           status: FAILED
-        color: danger
+          color: danger
 
   build-and-deploy-nginx:
     needs: test
