@@ -1,4 +1,4 @@
-# StockStalker - Backend API
+# StockStalker - Nginx Reverse Proxy
 
 ## Makefile Commands
 
