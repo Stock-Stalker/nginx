@@ -18,9 +18,6 @@ reload:
 test-image-security:
 				snyk config set api=$(snyk_auth_token) && snyk container test nginx:stable-alpine --file=Dockerfile --fail-on=upgradable
 
-lint:
-				npm run lint
-
 rm :
 				docker container prune -f
 				
