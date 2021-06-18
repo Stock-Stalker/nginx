@@ -27,6 +27,14 @@
     <img src="https://img.shields.io/website?url=https%3A%2F%2Fstockstalker.tk" />
 </p>
 
+
+## Table of Contents
+
+- [Make Commands](#make-commands)
+- [Required Software](#required-software)
+- [How to Run](#how-to-run)
+
+
 ## Makefile Commands
 
 `stop`: Stop the running server
@@ -53,21 +61,32 @@
 
 `test-image-security`: Test security vulnerabilities for base images (must have [snyk](https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI) installed globally)
 
-## How to Run
 
-To run the app you will need:
+## Required Software
 
 - [Docker](https://docs.docker.com/get-docker/)
-- [docker-compse](https://docs.docker.com/compose/install/)
+- [docker-comopse](https://docs.docker.com/compose/install/)
+- [CMake](https://cmake.org/install/)
 
-Once you have your environment fully set up, run:
 
-```bash
+## How to Run
+
+Clone the repo
+```zsh
+git clone git@github.com:Stock-Stalker/nginc.git
+```
+
+cd into the directory
+```zsh
+cd nginx
+```
+
+Run the application!
+```zsh
 make start
 ```
 
 To stop the app press `CNTRL + C`. Then run:
-
-```bash
+```zsh
 make stop
 ```
