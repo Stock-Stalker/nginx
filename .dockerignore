@@ -1,8 +1,10 @@
 .git*
 .dockerignore
+.env
 .gitignore
 *.md
 docker-compose*
 Dockerfile*
+logo.png
 Makefile
 *.mk

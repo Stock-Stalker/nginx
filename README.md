@@ -1,4 +1,31 @@
-# StockStalker - Nginx Reverse Proxy
+<!-- logo -->
+<p align="center">
+  <img width="300" src="logo.png">
+</p>
+
+<!-- short description -->
+<h1 align="center">StockStalker - Nginx Reverse Proxy </h1>
+
+<p align="center">
+    <!-- license -->
+    <img src="https://img.shields.io/github/license/Stock-Stalker/nginx" />
+    <!-- code size  -->
+    <img src="https://img.shields.io/github/languages/code-size/Stock-Stalker/nginx" />
+    <!-- issues -->
+    <img src="https://img.shields.io/github/issues/Stock-Stalker/nginx" />
+    <!-- pull requests -->
+    <img src="https://img.shields.io/github/issues-pr/Stock-Stalker/nginx" />
+    <!-- number of commits per year -->
+    <img src="https://img.shields.io/github/commit-activity/y/Stock-Stalker/nginx" />
+    <!-- last commit -->
+    <img src="https://img.shields.io/github/last-commit/Stock-Stalker/nginx" />
+    <!-- docker image size -->
+    <img src="https://img.shields.io/docker/image-size/starlightromero/stockstalker-nginx" />
+    <!-- docker pulls -->
+    <img src="https://img.shields.io/docker/pulls/starlightromero/stockstalker-nginx" />
+    <!-- website status -->
+    <img src="https://img.shields.io/website?url=https%3A%2F%2Fstockstalker.tk" />
+</p>
 
 ## Makefile Commands
 
@@ -19,6 +46,8 @@
 `start`: Start development server at port `8080`
 
 `reload`: Stop development server and restart the server at port `8080`
+
+`hard-reload`: Stop container, remove container, rebuild container, and start development server
 
 `debug`: Start development server in debug mode
 
